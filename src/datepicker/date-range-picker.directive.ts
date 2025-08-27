@@ -6,41 +6,41 @@ import {
   ElementRef,
   inject,
   input,
-} from '@angular/core';
+} from "@angular/core";
 
-import DateRangePicker from 'vanillajs-datepicker/DateRangePicker';
+import DateRangePicker from "vanillajs-datepicker/DateRangePicker";
 
 @Directive({
-  selector: '[daterangepicker]',
+  selector: "[daterangepicker]",
 })
 export class DateRangePickerDirective {
   destroyRef = inject(DestroyRef);
 
-  title = input<string | undefined>(undefined, { alias: 'datepicker-title' });
+  title = input<string | undefined>(undefined, { alias: "datepicker-title" });
   autoHide = input(false, {
     transform: booleanAttribute,
-    alias: 'datepicker-autohide',
+    alias: "datepicker-autohide",
   });
   clearButton = input(false, {
     transform: booleanAttribute,
-    alias: 'datepicker-clear',
+    alias: "datepicker-clear",
   });
   todayButton = input(false, {
     transform: booleanAttribute,
-    alias: 'datepicker-today',
+    alias: "datepicker-today",
   });
   buttons = input(false, {
     transform: booleanAttribute,
-    alias: 'datepicker-buttons',
+    alias: "datepicker-buttons",
   });
   todayHighlight = input(false, {
     transform: booleanAttribute,
-    alias: 'datepicker-today-highlight',
+    alias: "datepicker-today-highlight",
   });
   language = input<string | undefined>(undefined, {
-    alias: 'datepicker-language',
+    alias: "datepicker-language",
   });
-  format = input<string | undefined>(undefined, { alias: 'datepicker-format' });
+  format = input<string | undefined>(undefined, { alias: "datepicker-format" });
 
   el = inject(ElementRef);
   datepicker?: DateRangePicker;

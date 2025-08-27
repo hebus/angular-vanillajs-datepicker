@@ -48,7 +48,6 @@ export class DatepickerDirective {
 
   constructor() {
     afterNextRender(() => {
-      console.log('datepicker element', this.el);
       this.datepicker = new Datepicker(this.el.nativeElement, {
         format: this.format(),
         clearButton: this.buttons() || this.clearButton(),
